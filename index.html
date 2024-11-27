@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Elevator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        section p {
+            color: #555;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form textarea, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        .recent-pitches ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recent-pitches ul li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Idea Elevator</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ai-generator">AI Generator</a></li>
+                <li><a href="#submit">Submit Idea</a></li>
+                <li><a href="#recent-pitches">Recent Pitches</a></li>
+                <li><a href="#expand-idea">Expand Idea</a></li>
+                <li><a href="#login">Login/Signup</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Idea Elevator</h2>
+        <p>Pitch your ideas, get AI-powered solutions, and connect with collaborators!</p>
+    </section>
+
+    <!-- AI Idea Generator -->
+    <section id="ai-generator">
+        <h2>AI Idea Generator</h2>
+        <p>Not sure where to start? Let our AI generate solutions for your challenges.</p>
+        <form>
+            <label for="problem">Describe Your Problem or Idea:</label>
+            <textarea id="problem" name="problem" placeholder="Write a brief description..." required></textarea>
+            <button type="submit">Generate Solutions</button>
+        </form>
+        <div id="ai-output">
+            <h3>AI Suggestions:</h3>
+            <p>Submit a description to see ideas here!</p>
+        </div>
+    </section>
+
+    <!-- Submit Idea Section -->
+    <section id="submit">
+        <h2>Submit Your Idea</h2>
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter your idea title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Describe your idea in detail" required></textarea>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="tech">Tech</option>
+                <option value="health">Health</option>
+                <option value="education">Education</option>
+                <option value="environment">Environment</option>
+            </select>
+
+            <button type="submit">Submit Idea</button>
+        </form>
+    </section>
+
+    <!-- Recent Pitches Section -->
+    <section id="recent-pitches">
+        <h2>Recent Pitches</h2>
+        <p>Check out the latest ideas submitted by our community:</p>
+        <div class="recent-pitches">
+            <ul>
+                <li>
+                    <strong>Title:</strong> Smart Greenhouse<br>
+                    <strong>Category:</strong> Environment<br>
+                    <strong>Description:</strong> A greenhouse that uses IoT sensors to monitor and optimize plant growth.
+                </li>
+                <li>
+                    <strong>Title:</strong> AI Tutor<br>
+                    <strong>Category:</strong> Education<br>
+                    <strong>Description:</strong> An AI-powered personal tutor for students in rural areas.
+                </li>
+                <li>
+                    <strong>Title:</strong> Health Companion App<br>
+                    <strong>Category:</strong> Health<br>
+                    <strong>Description:</strong> A mobile app for tracking daily health stats and getting instant medical advice.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Expand Idea Section -->
+    <section id="expand-idea">
+        <h2>Expand Your Idea</h2>
+        <p>Already have an idea? Let AI suggest improvements or innovative features.</p>
+        <form>
+            <label for="idea-text">Paste Your Idea Draft:</label>
+            <textarea id="idea-text" name="idea-text" placeholder="Paste your draft here..." required></textarea>
+            <button type="submit">Get Suggestions</button>
+        </form>
+        <div id="expanded-output">
+            <h3>AI-Generated Enhancements:</h3>
+            <p>Submit your draft to see suggestions here!</p>
+        </div>
+    </section>
+
+    <!-- Login/Signup Section -->
+    <section id="login">
+        <h2>Login / Signup</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>https://accounts.google.com/b/0/AddMailService
+
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#signup">Sign up here</a></p>
+        </form>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Idea Elevator. All rights reserved.</p>
+    </footer>
+</body>
+</html>
